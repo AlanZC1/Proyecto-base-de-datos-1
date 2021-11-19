@@ -1,0 +1,79 @@
+ insert into areas values (default, 'Restaurante', 58.00);
+ insert into areas values (default,'Area de Recreacion', 34.20);
+ insert into areas values (default,'Area de Masaje', 25.00);
+ insert into areas values (default,' Custodia de Bienes',38.00);
+
+
+insert into tipodecliente values (default,'frecuente');
+insert into tipodecliente values (default, 'normales');
+
+insert into tipo_empleado values (default,'recepcionista');
+insert into tipo_empleado values (default,'personal de servicio');
+insert into tipo_empleado values (default, 'administrador ' )
+
+insert into CLIENTE values (default, 001, 'Robert', 'Moreira', 'San Pedro', '0999912340', '1234567890' );
+insert into CLIENTE values (default, 002, 'Alan', 'Cardenas', 'San Agustin','0939123450','0987654321');
+insert into CLIENTE values (default, 002, 'Alexy', 'Anchundia','Los Bajos', '0999991245', '1234578906');
+insert into CLIENTE values (default, 002, 'Elizabeth', 'Jaramillo','Leonidas Proaño', '0997991267', '2134576890');
+insert into CLIENTE values (default, 001, 'Stefanny', 'Zambrano', 'Manta', '0999981299', '1234560987');
+insert into CLIENTE values (default, 002, 'Rosa', 'Quimis', 'Manta', '0999912912', '1234592387');
+
+
+insert into EMPLEADO values (default,001,'Geovanny', 'Bazurto','Manta','02/4/1995','21/6/2021' );
+insert into EMPLEADO values (default,002,'Erick', 'Moreira', 'Manta','12/3/1998','21/8/2020');
+insert into EMPLEADO values (default,003,'Pierina', 'Moreira','Montecristi','21/8/2000','1/7/2021');
+insert into EMPLEADO values (default,001,'Kennia', 'Intriago', 'Portoviejo','23/6/1999','15/8/2021');
+insert into EMPLEADO values (default,002,'Rosa', 'Zamora','Cuenca', '19/11/2001','11/6/2021');
+insert into EMPLEADO values (default,003,'Maria', 'Zamora','Manta','23/9/20022','15/10/2021');
+
+
+insert into habitacion values (default, '2', 20,0,'SNJNSJ');
+insert into habitacion values (default, '1', 10,0,'SNJNSJ');
+insert into habitacion values (default, '3', 30,0,'SNJNSJ');
+insert into habitacion values (default, '3', 30,0,'SNJNSJ');
+insert into habitacion values (default, '1', 10,0,'SNJNSJ');
+insert into habitacion values (default, '3', 30,0,'SNJNSJ');
+
+insert into reserva values (1,1,1,5,'15:30:05' );
+insert into reserva values (2,1,2,4,'10:35:55' );
+insert into reserva values (3,1,3,3,'19:10:23' );
+insert into reserva values (4,4,3,4,'11:30:45' );
+insert into reserva values (5,4,2,5,'20:11:25' );
+insert into reserva values (6,1,1,5,'15:30:05' );
+insert into reserva values (7,1,2,5,'10:35:55' );
+insert into reserva values (8,1,3,3,'19:10:23' );
+insert into reserva values (9,4,3,1,'11:30:45' );
+insert into reserva values (10,4,3,1,'20:11:25' );
+
+insert into reserva_areas values (1, 1,1,1);
+insert into reserva_areas values (2, 1,2,1);
+insert into reserva_areas values (3, 2,3,1);
+insert into reserva_areas values (4, 3,4,1);
+insert into reserva_areas values (5, 4,1,1);
+insert into reserva_areas values (6, 5,3,1);
+insert into reserva_areas values (7, 1,1,2);
+insert into reserva_areas values (8, 1,2,2);
+insert into reserva_areas values (9, 2,3,3);
+insert into reserva_areas values (10, 3,4,3);
+insert into reserva_areas values (13, 10,1,6);
+insert into reserva_areas values (12, 10,3,6);
+
+insert into factura values(1, 1, '11/7/2020',0 );
+insert into factura values(2, 2, '10/11/2021',0 );
+insert into factura values(3, 3, '19/8/2020',0 );
+insert into factura values(4, 4, '17/3/2021',0 );
+insert into factura values(5, 5, '1/3/2021',0 );
+insert into factura values(6, 6, '11/5/2020',0 );
+insert into factura values(7, 7, '10/1/2021',0 );
+insert into factura values(8, 8, '19/10/2020',0 );
+insert into factura values(9, 9, '17/3/2021',0 );
+insert into factura values(10, 10, '1/3/2021',0 );
+
+
+insert into mantenimiento values (default,2,1,'no','11/7/2020' );
+insert into mantenimiento values (default,5,2,'no','10/11/2021' );
+insert into mantenimiento values (default,5,3,'no','19/8/2020' );
+insert into mantenimiento values (default,2,4,'no','17/9/2021' );
+insert into mantenimiento values (default,5,5,'no','1/3/2021' );
+insert into mantenimiento values (default,2,6,'no','5/4/2020' );
+

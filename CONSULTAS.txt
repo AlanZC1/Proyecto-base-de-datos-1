@@ -1,0 +1,41 @@
+   select habitacion.habitacion_id, sum(HABITACION.HABITACION_PRECIO) as total,extract(year from FACTURA.FAC_FECHA)
+from reserva_areas
+inner join habitacion on habitacion.habitacion_id = reserva_areas.habitacion_id 
+inner join reserva on  reserva.res_is = reserva_areas.res_is 
+inner join factura on factura.res_is = reserva.res_is
+group by habitacion.habitacion_id, extract(year from FACTURA.FAC_FECHA)
+order by extract(year from FACTURA.FAC_FECHA)
+
+
+
+
+select 
+(cliente.clie_nombre || ' ' || cliente.clie_apellido )as nombre,  sum(HABITACION.HABITACION_PRECIO) as total, count( FACTURA.FAC_FECHA)as vecesenelaño,
+extract(year from FACTURA.FAC_FECHA)
+from reserva_areas
+inner join habitacion on habitacion.habitacion_id = reserva_areas.habitacion_id 
+inner join reserva on  reserva.res_is = reserva_areas.res_is 
+inner join factura on factura.res_is = reserva.res_is
+inner join cliente on cliente.cli_id = reserva.cli_id
+group by cliente.clie_nombre, cliente.clie_apellido , extract(year from FACTURA.FAC_FECHA)
+
+select 
+SER_NOMBRE ,sum(SER_PRECIO) as total,extract(year from FACTURA.FAC_FECHA) AS AÑO
+from reserva_areas
+inner join habitacion on habitacion.habitacion_id = reserva_areas.habitacion_id 
+inner join AREAS on AREAS.SER_ID = reserva_areas.SER_ID
+inner join reserva on  reserva.res_is = reserva_areas.res_is 
+inner join factura on factura.res_is = reserva.res_is
+group by SER_NOMBRE, extract(year from FACTURA.FAC_FECHA)
+order by extract(year from FACTURA.FAC_FECHA)
+
+
+
+
+select habitacion.habitacion_id, sum(RD_OBSERVACION) as total,extract(year from FACTURA.FAC_FECHA)
+from reserva_areas
+inner join habitacion on habitacion.habitacion_id = reserva_areas.habitacion_id 
+inner join reserva on  reserva.res_is = reserva_areas.res_is 
+inner join factura on factura.res_is = reserva.res_is
+group by habitacion.habitacion_id, extract(year from FACTURA.FAC_FECHA)
+order by extract(year from FACTURA.FAC_FECHA)
